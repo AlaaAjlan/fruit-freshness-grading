@@ -61,33 +61,6 @@ On average, predictions are less than one point away from the human-assigned sco
 
 <p align="center"><img src="images/regression_true_vs_pred.png" width="420" alt="True vs predicted freshness score"></p>
 
-## Repository structure
-
-```
-notebooks/
-  01_classification_efficientnet.ipynb      # data cleaning, Optuna tuning, training, evaluation, Grad-CAM
-  02_strawberry_freshness_regression.ipynb  # freshness-score regressor (PyTorch)
-  03_optimization_experiments.ipynb         # 11 controlled experiments vs. the baseline
-data/
-  strawberry_freshness_scores.csv           # hand-made labels: image name -> score (1–10)
-images/                                     # figures used in this README
-```
-
-## Running it
-
-The notebooks were built for **Google Colab with a GPU**.
-
-```bash
-pip install -r requirements.txt
-```
-
-- **Notebooks 01 and 03** download the dataset automatically with `kagglehub`.
-- **Notebook 02** expects:
-  - the strawberry images from the same Kaggle dataset (`FreshStrawberry` and `RottenStrawberry` folders)
-  - `data/strawberry_freshness_scores.csv`
-
-  Both should be in your Google Drive.
-
 ## Tech stack
 
 Python · TensorFlow/Keras · PyTorch · EfficientNet · Optuna · Grad-CAM (tf-explain) · scikit-learn · Streamlit · Google Apps Script (labeling workflow)
