@@ -15,7 +15,7 @@ A computer vision system that looks at a photo of produce and answers two questi
 | **Freshness score** | EfficientNet-B0 regressor (PyTorch), **MAE 0.92 / RMSE 1.43** on a 1–10 scale |
 | **Custom dataset** | 572 strawberry images labeled by hand with a freshness score |
 | **Explainability** | Grad-CAM heatmaps for every classification |
-| **Tuning** | Optuna hyperparameter search plus 12 controlled optimization experiments |
+| **Tuning** | Optuna hyperparameter search plus 11 controlled optimization experiments |
 | **Deployment** | Streamlit web app with image upload and camera capture |
 
 ## How it works
@@ -67,7 +67,7 @@ On average, predictions are less than one point away from the human-assigned sco
 notebooks/
   01_classification_efficientnet.ipynb      # data cleaning, Optuna tuning, training, evaluation, Grad-CAM
   02_strawberry_freshness_regression.ipynb  # freshness-score regressor (PyTorch)
-  03_optimization_experiments.ipynb         # 12 controlled experiments vs. the baseline
+  03_optimization_experiments.ipynb         # 11 controlled experiments vs. the baseline
 data/
   strawberry_freshness_scores.csv           # hand-made labels: image name -> score (1–10)
 images/                                     # figures used in this README
